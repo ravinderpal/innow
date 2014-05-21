@@ -1,0 +1,88 @@
+<!doctype html>
+
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>SmarterKet</title>
+     
+    <meta name="description" content="Presentazione SmarterKet di Innow.ja" />
+    <meta name="author" content="Innow.ja" />
+
+    <!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />-->
+    <link href="./css/fontz.css" rel="stylesheet" />
+    <link href="css/pres.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="assets/innow_logo01.png">
+<!--    <link rel="apple-touch-icon" href="apple-touch-icon.png" /> -->
+</head>
+
+<body class="impress-not-supported">
+<!--
+<div class="fallback-message">
+    <p>Il tuo browser <b>non supporta le funzioni richieste</b> dalla presentazione. Potrai visualizzarne una versione semplificata.</p>
+    <p>Sono consigliate le ultime versioni di <b>Chrome</b>, <b>Safari</b> e <b>Firefox</b></p>
+</div>
+-->
+<div id="impress"> <!-- main presentation start -->
+
+
+	<div class="step" id="organizzazione" data-x="0" data-y="0">
+		<q>Cosa serve per far la <strong>spesa</strong>?</q>
+	</div>
+	<div class="step" id="lista" data-x="0" data-y="500">
+		<q>la <strong>lista...</strong></q><br><img class="listaimg" src="assets/lista_spesa.jpg" align="right">
+	</div>
+	<div class="step" id="offerte" data-x="0" data-y="1200">
+		<q>le <strong>offerte</strong> dei <strong>supermercati...</strong>
+		<br>
+		<br>
+		<img class="offerteimg" src="assets/offerte.jpg">
+	</div>
+	<div class="step" data-x="0" data-y="2000">
+		<q>esiste un modo più <strong>semplice</strong> ed <strong>efficace</strong>?</q><br>
+		<img class="think" src="assets/think_2.png" width="300" align="right" >
+	</div>
+	<div class="step" id="noi" data-x="0" data-y="2500" data-z="200">
+		<q>ci abbiamo pensato <strong>noi</strong>!</q>
+	</div>
+	<div class="step" id="smarterket" data-x="1000" data-y="3000" data-rotate-y="90" data-rotate="-90">
+		<q><b class="title"><img class="logotitle" src="assets/innow_logo.png" width="100" >  <c>S</c>mar<c>ter</c>ket</b><br>è la nuova applicazione di <d class="innow"><img src="assets/innow_title.png" width="150"></d>
+	</div>
+	<div class="step" id="what" data-x="1000" data-y="3000" data-z="-500" data-rotate-y="90" data-rotate="-90">
+		<q>Ti permette di <strong class="one">organizzare</strong> e <strong class="two">gestire</strong> la <strong class="three">spesa</strong> e i suoi costi</q>	
+	</div>
+</div> <!-- main presentation end -->
+
+<!-- Hint -->
+
+<div class="hint">
+    <p>Usa la barra spaziatrice o le frecce per navigare</p>
+</div>
+
+<!-- For touch devices -->
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tocca a destra o sinistra per navigare</p>";
+}
+</script>
+<div style="position: fixed; bottom: 10px; left: 10px; pointer-events: auto;">
+    <iframe style="border: 0; margin: 0; padding: 0;" src="ButtonHome.html" width="50px" height="20px"></iframe>
+<!-- Impress.js -->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+<!-- Autorun presentation script -->
+<!--<script>
+  var impress = impress();
+  impress.init();
+
+  document.addEventListener('impress:stepenter', function(e){
+    if (typeof timing !== 'undefined') clearInterval(timing);
+    //var duration = (e.target.getAttribute('data-transition-duration') ? e.target.getAttribute('data-transition-duration') : 2000); // use the set duration or fallback to 2000ms
+    timing = setInterval(impress.next, 4000);
+  });
+</script>-->
+</body>
+</html>

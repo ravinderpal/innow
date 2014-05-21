@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>innow - Registrati</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom style for this template -->
+        <link href="css/innow.css" rel="stylesheet">
+		<link rel="shortcut icon" href="assets/innow_logo01.png">
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/innow_title_white.png" width="55">
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <menu class="nav navbar-nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./noi.html">Chi Siamo</a></li>
+                        <li><a href="./smarterket.html">Smarterket</a></li>
+                        <li class="active"><a href="./Registrati.html">Registrati</a></li>
+						<li class="ar login_popup"><a class="button" href="#" >Login</a>
+						<div class="popup"><a href="#" class="close"><FONT COLOR="#999999">CLOSE</FONT></a>
+						<form>
+							<P><br><span class="title"><FONT COLOR="#999999">E-mail</FONT></span> <input name="" type="text" /></P>
+							<P><span class="title"><FONT COLOR="#999999">Password</FONT></span><br><input name="" type="password" /></P>
+							<P><br><input name="" type="button" value="Login" /></P>
+						</form></div></li>
+                    </menu>
+                </div>
+            </div>
+        </div>
+        <!-- page -->
+        <div class="container">
+            <div class="page-header">
+                <div class="row">
+                <div class="col-md-6" >
+				<h1>Registrati</h1>
+<form role="form">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Conferma Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+  </div>
+  
+  <label for="exampleInputPassword1">Sesso</label>
+  <div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+    maschio
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+    femmina
+  </label>
+</div>
+<label for="exampleInputPassword1">Data Di Nascita</label>
+</br>
+<div class="col-md-4">
+<select class="form-control">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <option>20</option>
+  <option>21</option>
+  <option>22</option>
+  <option>23</option>
+  <option>24</option>
+  <option>25</option>
+  <option>26</option>
+  <option>27</option>
+  <option>28</option>
+  <option>29</option>
+  <option>30</option>
+  <option>31</option>
+</select>
+</div>
+
+<div class="col-md-4">
+<select class="form-control">
+  <option>Gennaio</option>
+  <option>Febbraio</option>
+  <option>Marzo</option>
+  <option>Aprile</option>
+  <option>Maggio</option>
+  <option>Giugno</option>
+  <option>Luglio</option>
+  <option>Agosto</option>
+  <option>Settembre</option>
+  <option>Ottobre</option>
+  <option>Novebre</option>
+  <option>Dicembre</option>
+</select>
+</div>
+
+<div class="col-md-4">
+<script>
+								window.onload=FillAll;
+								function FillAll()
+								{ var sy=1900;
+								  var yrEle=Func('selYear');
+								  for(var i=sy;i<=sy+150;i++)
+									{
+										var op=new Option(i,i);
+										yrEle.options.add(op);
+									}
+								  yrEle.selectedIndex=20;
+								}
+								function chg(val)
+								{
+									var tot=parseInt(val,10);
+									if(tot===28){
+									var yr=Func('selYear');
+									if(parseInt(yr.value,10)%4===0){ tot=29; }
+								}
+								var day=Func('selDay');
+								day.options.length=0;
+								for(var i=1;i<=tot;i++)
+								{
+									var op=new Option(i,i);
+									day.options.add(op);
+								}
+								}
+								function Func(id)
+									{return document.getElementById(id);}
+</script>
+<select class="form-control" id='selYear'>
+</select>
+</div>
+</br>
+<label for="exampleInputPassword1">La Tua Citta</label>
+<input type="text" class="form-control" placeholder="Text input">
+</br>
+<button type="submit" class="btn btn-default">Submit</button>
+<input type="checkbox"> Accetta i termini e condizioni
+</form>
+</div>
+					<div class="col-md-6">
+					<img src="assets/innow_title.png" width=20%>
+					<img src="assets/sMARterKET_black.png" width=30%>
+					<div style="height:500px;width:100%;border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+"SMARTERKET"</br>
+
+TERMINI E CONDIZIONI D'USO e</br>
+MODELLO INFORMATIVA SULLA PRIVACY</br>
+
+PREMESSA</br>
+Per utilizzare l'applicazione per device Android denominata "Smarterket" ed accedere al sito web "www.innow.ja.it" 
+e/o ai servizi offerti dallo stesso- (di seguito entrambi, seguito congiuntamente, denominati <SMARTERKET>), 
+l'Utente accetta di rispettare e di essere vincolato ai Termini e Condizioni
+d'Uso, ed al Modello informativa sulla Privacy, costituenti il presente <Contratto>
+giuridicamente vincolante tra l'Utente e la società INNOW.JA, la quale ha sede legale in Via Matilde di Canossa 21, 26013 Crema (Italy).
+Il servizio <SMARTERKET> gestito da INNOW.JA.</br>
+</br>
+ACCETTAZIONE DEI TERMINI E CONDIZIONI D'USO E MODELLO</br>
+INFORMATIVA SULLA PRIVACY</br>
+Prima di poter utilizzare il servizio <SMARTERKET>, l'Utente dovrà leggere ed
+accettare incondizionatamente i presenti Termini e Condizioni d'Uso pubblicati
+all'interno di un'apposita sezione del sito stessa(dall' applicazione si verrà reindirizzati alla sezione  del sito), nonchè rilasciare
+apposita autorizzazione al trattamento dei dati personali.
+Non potranno utilizzare il servizio <SMARTERKET> quei soggetti:
+1. che non abbiano l'età prevista dalla legge italiana per stipulare un contratto;
+2. ai quali sia stato vietato o in altro modo legalmente proibito, utilizzare il
+servizio <SMARTERKET> ai sensi e per gli effetti della legge italiana
+nonchè delle leggi del paese in cui l'Utente è residente o da cui accede o
+utilizza il servizio <SMARTERKET>.
+INNOW.JA consiglia di stampare o salvare una copia dei presenti Termini e
+Condizioni d'Uso e Modello Informativa sulla Privacy.
+L'Utente che non sia d'accordo nell'attenersi e conseguentemente nell'accettare i
+presenti Termini e Condizioni d'Uso e Modello Informativa sulla Privacy, non potrà
+utilizzare e/o accedere al servizio <SMARTERKET>.
+</br>
+MODIFICHE AI TERMINI E CONDIZIONI D'USO E MODELLO</br>
+INFORMATIVA SULLA PRIVACY</br>
+INNOW.JA si riserva di effettuare periodicamente delle modifiche ai presenti Termini
+e Condizioni d'Uso e Modello Informativa sulla Privacy.
+La versione modificata dei Termini e Condizioni d'Uso e Modello Informativa sulla
+Privacy sarà pubblicata all'interno di un'apposita sezione dell'applicazione stessa e del sito "www.innow.ja.it".
+Pertanto, INNOW.JA raccomanda vivamente di rivedere periodicamente il presente
+documento.
+L'eventuale utilizzo del servizio <SMARTERKET> dopo l'effettuazione delle
+modifiche ai Termini e Condizioni d'Uso e Modello Informativa sulla Privacy
+costituisce accettazione tacita delle stesse.
+Se non siete d'accordo nell'attenervi ai Termini e Condizioni d'Uso e Modello
+Informativa sulla Privacy modificati, l'Utente non potrà utilizzare e/o accedere (o
+continuare ad utilizzare e/o accedere) al servizio <SMARTERKET>.
+</br>
+DESCRIZIONE DEL SERVIZIO <SMARTERKET> E FUNZIONALITà</br>
+BASE</br>
+APPLICAZIONE "SMARTERKET"</br>
+L'applicazione "Smarterket" permette all'Utente di creare una propria lista della spesa e visualizzarla sul proprio device Android.
+Per utilizzare l'applicazione "Smarterket" è necessario disporre di un
+dispositivo mobile Android che sia compatibile con
+il servizio <SMARTERKET>. INNOW.JA non garantisce che l'applicazione “Smarterket" sarà compatibile con ogni dispositivo Android, ciò dipende dalla versione del software e dalle specifiche tecniche del dispositivo stesso.
+a) Canali di distribuzione: l'applicazione "Smarterket" è distribuita su Google Play Store.
+Una volta che l'Utente ha scaricato ed installato l'applicazione "Smarterket" sul proprio dispositivo Android lo stesso potrà utilizzarla solo
+previa accettazione obbligatoria dei presenti Termini e Condizioni d'Uso e
+rilascio dell'autorizzazione al trattamento dei dati personali.
+b) Funzionalità ed interazioni: mediante l'applicazione "Smarterket",
+l'Utente potrà usufruire della funzione "Lista della spesa", ovvero potrà creare
+la propria lista della spesa con prodotti scelti da un vasto assortimento.
+</br>
+REGISTRAZIONE</br>
+Potranno effettuare la registrazione:
+- gli Utenti che abbiano raggiunto la maggiore età (ovvero 18 anni);
+L'Utente potrà registrarsi inserendo un indirizzo e-mail valido, una password valida, una data di nascita valida, specificando il sesso e la città di residenza valida. Non sono ammessi
+Utenti con stesso indirizzo e-mail.
+I dati di accesso inseriti in fase di registrazione (e-mail, password, data di nascita, sesso, città di residenza)
+saranno trattati e tutelati ai sensi e per gli effetti del D.Lgs. n. 196/2003 (Codice
+in materia di protezione dei dati personali), secondo quanto più
+dettagliatamente disposto nell'apposita sezione dal titolo "Modello Informativa
+sulla Privacy (ai sensi e per gli effetti del D.Lgs. n. 196/2003 -Codice in materia
+di protezione di dati personali-) e autorizzazione al trattamento dei dati
+personali" di cui a pagina 7.
+Nel caso in cui l'Utente dovesse smarrire la propria password, potrà recuperarla
+mediante il tasto "forgot password", attraverso il quale la password verrà inviata
+all'indirizzo e-mail indicato dall'Utente in fase di registrazione.
+L'Utente, inoltre, dovrà immediatamente notificare a INNOW.JA qualsiasi utilizzo
+non autorizzato del proprio account o qualsiasi altra violazione (nota o sospetta)
+della sicurezza.
+INNOW.JA non sarà responsabile per qualsiasi accesso non autorizzato, o
+alterazione di trasmissioni dati, qualsiasi materiale, informazione o di dati inviati
+o ricevuti. A tal fine, l'Utente manleva INNOW.JA ed i soggetti terzi con cui la
+stessa collabora per il servizio di cui al presente documento da ogni
+responsabilità derivante dalla gestione del proprio account, da eventuali azioni
+pregiudizievoli intraprese tramite la propria e-mail, nonchè da qualsiasi
+perdita di dati dallo stesso caricati all'interno del sito web “www.innow.ja.it”.
+La registrazione non è obbligatoria se l'Utente opta per il solo utilizzo
+dell'applicazione mediante la funzione "stand-alone" e, quindi, non utilizza i
+servizi di ricezione delle offerte pubblicitarie, ma dovrà comunque
+obbligatoriamente accettare i presenti Termini e Condizioni d'Uso, nonchè
+autorizzare il trattamento dei dati personali.
+L'Utente dichiara e accetta di assumersi ogni responsabilità in merito al
+contenuto delle liste generate mediante la funzione "stand-alone" e, pertanto,
+solleva sin da adesso INNOW.JA -e tutte le società terze dalla stessa incaricate
+ed ai fini di seguito descritti autorizzate- da tale responsabilità.
+FINALITA’ DEL TRATTAMENTO CUI SONO DESTINATI I DATI PERSONALI
+I dati personali dell'Utente o in generale i dati personali relativi a soggetti
+identificati od identificabili, raccolti a seguito dell'utilizzo del servizio <SMARTERKET>, saranno trattati:
+• per gli adempimenti connessi con gli scopi specificatamente stabiliti per il servizio
+<SMARTERKET>, in particolare:
+- per l'inserimento nelle anagrafiche nei database informatici aziendali;
+- per l'elaborazione di statistiche interne;
+- per soddisfare gli obblighi previsti dalla legge, dai regolamenti, dalla
+normativa comunitaria, da norme civilistiche e fiscali.
+Sempre in virtù del D.Lgs. n. 196/2003 ed ai soli fini dell'indicato trattamento, il
+Titolare potrà venire a conoscenza anche dei dati dell'Utente definiti "sensibili"
+ovvero, quelli idonei a rivelare l'origine razziale od etnica, le convinzioni
+religiose, filosofiche o di altro genere, le opinioni politiche, l'adesione ai partiti,
+sindacati, associazioni od organizzazioni a carattere religioso, filosofico, politico
+o sindacale, lo stato di salute e la vita sessuale.
+</br>
+2. MODALITA’ DI TRATTAMENTO DEI DATI</br>
+Il trattamento dei dati sarà effettuato da INNOW.JA, anche per mezzo di società
+terze dalla stessa incaricate ed ai fini ivi descritti autorizzate, nel rispetto di
+quanto disposto dal D.Lgs. n.196/2003 -Codice in materia di protezione dei dati
+personali- e con sistemi manuali ed automatizzati atti a memorizzare, gestire e
+trasmettere i dati stessi, con logiche strettamente correlate alle finalità stesse,
+sulla base dei dati in possesso di INNOW.JA.
+Specifiche misure di sicurezza verranno osservate da INNOW.JA per prevenire la
+perdita dei dati, usi illeciti o non corretti ed accessi non autorizzati.
+</br>
+3. TEMPO DI CONSERVAZIONE</br>
+I dati saranno conservati per il tempo necessario alle predette finalità e,
+comunque, non oltre i termini di legge.
+Per quel che riguarda la cancellazione, INNOW.JA comunica che la stessa potrà
+avvenire:
+• a seguito della cancellazione volontaria dell'account da parte dello stesso
+Utente;
+• in relazione a quegli account che non rispettano i presenti Termini e
+Condizioni d'Uso e Modello Informativa sulla Privacy.
+I dati identificativi, infine, fatte salve esigenza di natura difensiva, saranno
+conservati per 10 anni dalla data di cancellazione del profilo.
+</br>
+4. CONFERIMENTO DEI DATI PERSONALI - RIFIUTO AL CONFERIMENTO</br>
+L'Utente è libero di fornire i propri dati personali necessari per accedere ed
+utilizzare il servizio <SMARTERKET>.
+INNOW.JA s'impegna a che nessuno dei dati personali forniti dall'Utente per poter
+accedere ai indicati servizi venga diffuso.
+In tutti i casi, comunque, non sussiste alcun obbligo da parte dell'Utente di
+fornire i dati di identificazione personale. INNOW.JA precisa che il loro mancato
+conferimento può comportare l'impossibilità di accedere ed utilizzare il servizio
+<SMARTERKET>.
+Si precisa, pertanto, che il conferimento dei dati è facoltativo, pur tuttavia
+l'eventuale rifiuto a rispondere comporta l'impossibilità per il Titolare di dar
+corso alle richieste degli interessati e, nel caso sia dato il consenso, all'invio di
+comunicazioni commerciali.
+</br>
+5. AMBITO DI COMUNICAZIONE E DIFFUSIONE DEI DATI</br>
+I dati personali (non sensibili) dell'Utente potranno essere comunicati, al fine di
+consentire l'adempimento di obblighi contrattuali o di legge:
+• a tutti i soggetti cui la facoltà di accesso a tali dati è riconosciuta in forza di
+legge o di provvedimenti normativi;
+• a tutte quelle persone fisiche e/o giuridiche, pubbliche e/o private, quando
+la comunicazione risulti necessaria o funzionale allo svolgimento della
+nostra attività e nei modi e per le finalità sopra illustrate;
+• ad enti pubblici e privati, anche a seguito di ispezioni o verifiche (es. da
+parte di Autorità Giudiziarie, organi di Polizia Postale, organi di Polizia
+Tributaria, Uffici dell'Agenzia delle Entrate, Uffici delle Dogane, etc.), al solo
+fine di consentire l'espletamento dell'incarico loro affidato.
+INNOW.JA, in qualità di titolare del trattamento, s'impegna, pertanto, a non
+diffondere i dati inseriti dall'Utente e a trattarli nel rispetto di quanto disposto dal
+D.Lgs. n.196/2003 -Codice in materia di protezione dei dati personali.
+</br>
+PRATICHE GENERALI RELATIVE ALL'USO E ALL'ARCHIVIAZIONE</br>
+L'Utente riconosce che INNOW.JA potrà stabilire regole e limiti generali riguardanti:
+a) l'utilizzo dell'app <SMARTERKET>;
+b) lo spazio di memorizzazione massima che può essere attribuito sui server.
+L'Utente dichiara e accetta che INNOW.JA, non ha alcuna responsabilità
+per l'eliminazione o la mancata memorizzazione di dati o altri contenuti mantenuti o trasmessi tramite il servizio offerto dall'app <SMARTERKET>.
+L'Utente dichiara ed accetta che INNOW.JA, in qualità di titolare del progetto ivi descritto, si riserva il diritto di cancellare (previo preavviso):
+• i contenuti di quegli Utenti che non rispettano i presenti Termini e Condizioni
+d'Uso e Modello Informativa sulla Privacy.
+Infine, INNOW.JA si riserva (e l'Utente accetta) il diritto di modificare queste regole e limiti generali in qualsiasi momento, a sua esclusiva discrezione, con o senza preavviso.
+</br>
+LIMITAZIONI D'USO</br>
+In assenza di una previa autorizzazione scritta di INNOW.JA, l'Utente:
+a) non è autorizzato a visualizzare, distribuire, concedere in licenza, eseguire,
+pubblicare, riprodurre, duplicare, copiare, creare opere derivate, modificare,
+vendere, rivendere, sfruttare, trasferire o trasmettere per qualsiasi scopo
+commerciale, qualsiasi parte dell'app <SMARTERKET>, l'uso o
+l'accesso allo stesso;
+b) non è autorizzato ad aggirare (o tentare di aggirare), disabilitare, o in altro modo
+interferire con alcun elemento legato alla sicurezza, uso, e contenuto
+accessibile dell'app <SMARTERKET> od elementi che impediscano o
+limitino l'uso o la copia dei contenuti(volantini, offerte e dati dei supermercati) caricati e condivisi dagli amministratori del sito web "www.innow.ja.it";
+c) non è autorizzato a raccogliere, né tanto meno a costituire banche dati con i
+dati personali degli Utenti iscritti al sito web "www.innow.ja.it";
+d) non è autorizzato ad utilizzare il sito web "www.innow.ja.it" per
+concludere o tentare di concludere affari di tipo commerciale o connessi
+ad un'attività commerciale.
+e) L'Utente s'impegna, inoltre, a non pregiudicare, in qualunque modo, la stabilità dei server che ospitano il servizio. In caso contrario INNOW.JA si riserva la facoltà di sospendere il servizio e ordinare all'Utente di eliminare l'errore o interrompere l'azione, pena la risoluzione del contratto.
+INNOW.JA concede agli operatori di motori di ricerca il permesso di
+usare gli spider per copiare materiale dal sito web "www.innow.ja.it" al solo fine di creare indici di ricerca dei materiali pubblicamente disponibili, ma non per creare copie cache o archivi di tali materiali. INNOW.JA si riserva il diritto di revocare tali concessioni sia in generale che in casi specifici.
+</br>
+CESSAZIONE DEL RAPPORTO</br>
+Il presente Contratto, continuerà ad essere vigente fino al suo scioglimento per
+volontà delle Parti o ai sensi di legge:
+a) qualora sia l'Utente a voler recedere dal presente Contratto, lo stesso dovrà
+farlo:
+• comunicandolo ad INNOW.JA, in qualsiasi momento, nei modi previsti dalla
+legge italiana;
+b) qualora sia INNOW.JA a voler recedere dal presente Contratto, la stessa potrà farlo in uno dei seguenti casi:
+• in caso l'Utente abbia violato una qualunque delle disposizioni dei presenti
+Termini e Condizioni d'Uso, ovvero abbia agito in un modo che indica
+chiaramente che non ha più intenzione di conformarsi alle disposizioni dei
+Termini, o non è più in grado di farlo;
+• INNOW.JA è obbligata a farlo perché così richiesto dalla legge italiana e/o
+dalla legge del Paese in cui l'Utente è residente o da cui lo stesso accede e
+utilizza il servizio <SMARTERKET>.
+• INNOW.JA non sia più intenzionata a fornire il servizio <SMARTERKET>
+agli Utenti in Italia nonchè a quelli del Paese in cui gli stessi sono residenti
+o da cui accedono e utilizzano il suddetto servizio;
+• la fornitura del servizio <SMARTERKET> nei confronti dell'Utente da
+parte di INNOW.JA non sia, per la stessa, più vantaggiosa dal punto di vista
+commerciale.
+In questi casi INNOW.JA dovrà, ove possibile, inviare comunicazione di tale
+scioglimento con ragionevole periodo di preavviso.
+Nel momento in cui i presenti Termini e Condizioni d'Uso vengano a cessare, tutti i diritti legali, gli obblighi e le responsabilità legali di cui l'Utente ed INNOW.JA abbiano beneficiato o ai quali siano stati assoggettati (anche se maturati durante il periodo di validità ed efficacia dei Termini stessi), non saranno inficiati da tale cessazione e le disposizioni sopra descritte continueranno ad applicarsi a tali diritti, obblighi e responsabilità ai sensi di legge.
+
+</br>
+LEGGE APPLICABILE</br>
+I presenti Termini e Condizioni d'Uso e Modello Informativa sulla Privacy, nonchè ogni rapporto tra l'Utente ed INNOW.JA sono soggetti alla legge italiana.
+Le Parti concordano che qualsiasi questione legale derivante dai presenti Termini e Condizioni d'Uso e Modello Informativa sulla Privacy sarà devoluta alla competenza esclusiva dei Tribunali Italiani.
+Fatto salvo quanto sopra, INNOW.JA si riserva, comunque, di richiedere provvedimenti monitori o cautelari (od equivalenti provvedimenti d'urgenza) in qualsiasi giurisdizione.
+</br>
+PROPRIETÀ INTELLETTUALE</br>
+SMARTERKET costituisce un'opera di cui INNOW.JA è autrice proprietaria ai sensi di legge e delle norme in materia di proprietà intellettuale.
+Tutte le opere integrate in SMARTERKET sono di proprietà di INNOW.JA o di terzi che hanno autorizzato INNOW.JA ad utilizzarli.
+L'Utente prende atto che tutti i diritti di proprietà intellettuale e/o industriale spettanti a INNOW.JA non possono essere in alcun modo alterati, modificati, ceduti a seguito del presente accordo.
+</br>
+LE LICENZE UTENTE FINALE</br>
+INNOW.JA concede all'Utente la licenza a titolo gratuito non esclusiva, non trasferibile e revocabile (in qualsiasi momento), di usare una copia del codice compilato dell'applicazione SMARTERKET su un unico dispositivo mobile di sua proprietà.
+</br>
+L'Utente non può:
+• modificare o decodificare l'applicazione SMARTERKET, nella misura in cui tali restrizioni siano espressamente vietate dalla legge;
+• affittare, noleggiare, prestare, rivendere, concedere in sub-licenza, distribuire o altrimenti trasferire l'applicazione SMARTERKET a terzi o utilizzare lo stesso per la condivisione di tempo o servizi analoghi di terzi;
+• effettuare alcuna copia dell'applicazione SMARTERKET;
+• rimuovere, eludere, disattivare, danneggiare o interferire con la sicurezza e funzionalità dell'applicazione SMARTERKET;
+• rimuovere, eludere, disattivare, danneggiare quegli elementi che impediscono o limitano l'uso o la copia di qualsiasi contenuto accessibile tramite l'applicazione SMARTERKET, o caratteristiche che rafforzino le limitazioni sull'uso del software stesso;
+• violare il diritto d'autore e altri diritti di proprietà sull'applicazione SMARTERKET.
+</br>
+PUBBLICAZIONE A TITOLO GRATUITO
+
+</br>
+ESCLUSIONE DI GARANZIA</br>
+L'Utente dichiara e accetta che INNOW.JA, -e tutte le società terze dalla stessa incaricate ed ai fini di seguito descritti autorizzate- non potranno essere ritenute responsabili per eventuali danni (diretti o indiretti, conseguenti o incidentali e morali), derivanti dall'accesso e/o utilizzo di SMARTERKET.
+</br>
+LIMITAZIONE DI RESPONSABILITÀ</br>
+Per tutto quanto non espressamente già predisposto dal presente Contratto e nella misura in cui ciò sia permesso dalla legge vigente, INNOW.JA –e tutte le società terze dalla stessa incaricate ed ai fini di seguito descritti autorizzate- non potrà essere ritenuta responsabile per eventuali danni (diretti o indiretti, conseguenti o incidentali e morali), compresi i danni per perdite di profitti, avviamento, utilizzo, dati o altre perdite intangibili che risultino:
+• dall'uso, divulgazione e manutenzione dei dati inseriti in SMARTERKET;
+• dall'uso o incapacità di utilizzare da parte dell'Utente l’applicazione SMARTERKET.
+</br>
+DURATA DEI TERMINI E CONDIZIONI D'USO</br>
+Il presente contratto ha efficacia dal momento in cui l'utente accetta i presenti Termini e Condizioni d'uso e Modelli Informativa sulla Privacy, cliccando sul tasto "REGISTRATI" o "NON ORA".
+</br>
+MODELLO INFORMATIVA SULLA PRIVACY (AI SENSI E PER GLI
+EFFETTI DEL D.Lgs. n.196/2003 -CODICE IN MATERIA DI PROTEZIONE
+DEI DATI PERSONALI-) E AUTORIZZAZIONE AL TRATTAMENTO DEI
+DATI PERSONALI E SENSIBILI</br>
+INNOW.JA desidera informare l'Utente che il D.Lgs. n. 196/2003 (Codice in materia di protezione dei dati personali) dispone la tutela delle persone e di altri soggetti rispetto al trattamento dei dati personali.
+Secondo tale normativa, il trattamento sarà improntato ai principi di correttezza, liceità, trasparenza e tutela della riservatezza nonchè dei diritti dell'Utente.
+Pertanto, ai sensi dell'articolo 13 del D.Lgs. n.196/2003, INNOW.JA fornisce le seguenti informazioni utili per l'utilizzo dell’applicazione SMARTERKET (erogato via internet):
+
+</br>
+6. DATI DEI SOGGETTI TERZI</br>
+L'Utente manleva sin da ora INNOW.JA -e tutte le società terze dalla stessa incaricate ed ai fini di seguito descritti autorizzate-,da qualsiasi tipo di danno, diretto o indiretto, pretesa, onere o spesa, incluse le spese legali e giudiziali, che dovessero derivare ai soggetti terzi, in conseguenza di violazioni alla normativa vigente in materia di privacy poste in essere dall'Utente.
+</br>
+7. DIRITTI DI CUI ALL'ART. 7 DEL D.LGS N. 196/2003</br>
+INNOW.JA informa, infine, che il Codice della Privacy conferisce all'Utente, in qualità di soggetto interessato, l'esercizio di specifici diritti. In particolare, l'interessato può ottenere:
+• la conferma dell'esistenza o meno di dati personali che lo riguardano, anche se non ancora registrati, e la loro comunicazione in forma intelligibile;
+• l'indicazione dell'origine dei dati personali, delle finalità e modalità del trattamento nonchè della logica applicata in caso di trattamento effettuato con l'ausilio di strumenti elettronici;
+• l'indicazione degli estremi identificativi del titolare e dei responsabili nonchè dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza;
+• l'aggiornamento, la rettificazione, l'integrazione dei dati, nonchè la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge.
+In tutti i casi, eventuali richieste andranno rivolte all'indirizzo innow.ja@galileo.galileicrema.it
+</br>
+8. ESTREMI IDENTIFICATIVI DEL TITOLARE E DEL RESPONSABILE DEL TRATTAMENTO
+DEI DATI PERSONALI DELL'UTENTE</br>
+Il titolare del trattamento dei dati personali relativi a persone identificate od identificabili, raccolti e trattati a seguito dell'utilizzo di SMARTERKET è INNOW.JA, Via Matilde di Canossa 21, e-mail: innow.ja@galileo.galileicrema.it
+INNOW.JA informa, inoltre, che il trattamento di tali dati personali potrà avvenire anche presso la sede di società esterne appositamente incaricate e gli stessi dati potranno essere curati da personale tecnico dell'ufficio incaricato del trattamento oppure da incaricati per le operazioni di manutenzione occasionale.
+L'interessato, ai sensi dell'art. 7, ha diritto altresì di opporsi, per motivi legittimi, al trattamento dei dati personali, anche se pertinenti allo scopo della raccolta, nonchè al trattamento di dati personali al solo fine di invio di materiale pubblicitario o di vendita diretta o per il compimento di ricerche di mercato o di
+comunicazione commerciale.
+</br>
+9. AUTORIZZAZIONE AL TRATTAMENTO DEI DATI PERSONALI E SENSIBILI</br>
+L'Utente, ai sensi degli artt. 7, 8, 9, 11, 13, 23 e 31 del D.Lgs. 30 giugno 2003, n. 196, acquisite le informazioni fornite dal titolare del trattamento dei dati personali, dichiara di autorizzare la società INNOW.JA (ed eventuali società terze selezionate preventivamente dalla stessa) al trattamento dei propri
+dati personali e/o sensibili, nel rispetto della normativa sulla Privacy, per gli scopi specificatamente indicati di cui al punto 1 dal titolo "Finalità del trattamento cui sono destinati i dati personali" e per il periodo di tempo stabilito dai termini di legge.
+L'Utente DICHIARA di aver preso visione del presente documento e, pertanto ACCETTA i presenti Termini e Condizioni d'Uso, AUTORIZZA il trattamento dei dati personali e/o sensibili per le finalità sopra esposte, nonchè AUTORIZZA il trattamento dei dati personali per l'invio di comunicazioni commerciali e/o
+pubblicitarie inerenti le attività ed i prodotti di INNOW.JA, notizie varie, etc. ai sensi di quanto previsto dall'art. 123 del medesimo decreto legislativo.
+</br>
+
+DISCLAIMER</br>
+
+SOPRAVVIVENZA DI DISCLAIMER</br>
+Le esclusioni di garanzie, obbligazioni di risarcimenti e le limitazioni di responsabilità sopravviveranno alla rescissione della presente licenza, comunque causata. Purtuttavia tale sopravvivenza non implica né crea alcun diritto continuato di utilizzare il Software concesso in licenza dopo la rescissione della presente licenza.
+
+					</div>
+					</div>
+				</div>
+				</div>
+            <hr>
+			<footer>
+                <div class="row">
+                    <div class="col-md-2"><p>&copy; <img src="./assets/innow_title.png" width="50" > 2013</p></div>
+                    <div class="col-md-10"><p align="right">Ottimizzato per l'ultima versione di Chrome e Firefox e per Smartphone</p></div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Bootstrap core JavaScript placed at the end of the document so the pages load faster -->
+        <script src="js/bootstrap.min.js"></script>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script type= "text/javascript" src = "countries.js"></script>
+        <title>innow - Registrati</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom style for this template -->
+        <link href="css/innow.css" rel="stylesheet">
+		<link rel="shortcut icon" href="assets/innow_logo01.png">
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/innow_title_white.png" width="55">
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <menu class="nav navbar-nav">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./noi.html">Chi Siamo</a></li>
+                        <li><a href="./smarterket.html">Smarterket</a></li>
+                        <li class="active"><a href="./Registrati.html">Registrati</a></li>
+						<li class="ar login_popup"><a class="button" href="#" >Login</a>
+						<div class="popup"><a href="#" class="close"><FONT COLOR="#999999">CLOSE</FONT></a>
+						<form>
+							<P><br><span class="title"><FONT COLOR="#999999">E-mail</FONT></span> <input name="" type="text" /></P>
+							<P><span class="title"><FONT COLOR="#999999">Password</FONT></span><br><input name="" type="password" /></P>
+							<P><br><input name="" type="button" value="Login" /></P>
+						</form></div></li>
+                    </menu>
+                </div>
+            </div>
+        </div>
+        <!-- page -->
+        <div class="container">
+            <div class="page-header">
+                <h1 align="left">Registrati</h1>
+                <div class="lead">
+				<div align="right">
+					<img src="assets/innow_title.png" width=20%>
+					<img src="assets/sMARterKET_black.png" width=30%>
+					
+				</div>
+				<div align="right">
+					<textarea>
+					Prova
+					</textarea>
+				</div>
+	<div align="left">
+	<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.email.value == "") {
+      alert("Errore: inserire una e-mail!");
+      form.username.focus();
+      return false;
+    }
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Errore: la password deve contenere almeno 6 caratteri!");
+        form.pwd1.focus();
+        return false;
+      }
+      if(form.pwd1.value == form.username.value) {
+        alert("Errore: la password deve essere diversa dall'email!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Errore: controlla se hai inserito e controllato la password!");
+      form.pwd1.focus();
+      return false;
+    }
+  }
+
+</script>
+
+<form ... onsubmit="return checkForm(this);">
+<table>
+<tr>
+	<td>E-mail</td> 
+	<td><input type="email" name="email"></td>
+</tr>
+<tr>
+	<td>Password</td> 
+	<td><input type="password" name="pwd1"></td>
+</tr>
+<tr>	
+	<td>Conferma Password</td>
+	<td><input type="password" name="pwd2"></td>
+
+					</tr>
+					<tr>
+						<td>Data di nascita</td>
+						<td>
+							<script>
+								window.onload=FillAll;
+								function FillAll()
+								{ var sy=1980;
+								  var yrEle=Func('selYear');
+								  for(var i=sy;i<=sy+40;i++)
+									{
+										var op=new Option(i,i);
+										yrEle.options.add(op);
+									}
+								  yrEle.selectedIndex=20;
+								}
+								function chg(val)
+								{
+									var tot=parseInt(val,10);
+									if(tot===28){
+									var yr=Func('selYear');
+									if(parseInt(yr.value,10)%4===0){ tot=29; }
+								}
+								var day=Func('selDay');
+								day.options.length=0;
+								for(var i=1;i<=tot;i++)
+								{
+									var op=new Option(i,i);
+									day.options.add(op);
+								}
+								}
+								function Func(id)
+									{return document.getElementById(id);}
+							</script>
+<body>
+<select id="selYear">
+</select>
+<select id="selMonth" onchange="chg(this.value);">
+<option></option>
+<option value="31">Gennaio</option>
+<option value="28">Febbraio</option>
+<option value="31">Marzo</option>
+<option value="30">Aprile</option>
+<option value="31">Maggio</option>
+<option value="30">Giugno</option>
+<option value="31">Luglio</option>
+<option value="31">Agosto</option>
+<option value="30">Settembre</option>
+<option value="31">Ottobre</option>
+<option value="30">Novembre</option>
+<option value="31">Dicembre</option>
+</select>
+<select id="selDay"></select>
+						</td>
+					</tr>
+					<tr>
+						<td>Sesso</td>
+						<td>
+							<form action="">
+								<fieldset>
+									M <input type="radio" name="sex" value="m"/>
+									F <input type="radio" name="sex" value="f"/>
+								</fieldset>
+</form>
+						</td>
+					</tr>
+					<tr>
+						<td>Citta'</td>
+						<td>
+						 Select Country (with states):   <select id="country" name ="country"></select>
+Select State: <select name ="state" id ="state"></select>
+ <script language="javascript">
+populateCountries("country", "state");
+ </script></td>
+					</tr>
+						<tr><td><input type="submit"></td></tr>
+					</form>
+                </table>
+				</div>
+				</div>
+            <hr>
+			<footer>
+                <div class="row">
+                    <div class="col-md-2"><p>&copy; <img src="./assets/innow_title.png" width="50" > 2013</p></div>
+                    <div class="col-md-10"><p align="right">Ottimizzato per l'ultima versione di Chrome e Firefox e per Smartphone</p></div>
+                </div>
+            </footer>
+        </div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Bootstrap core JavaScript placed at the end of the document so the pages load faster -->
+        <script src="js/bootstrap.min.js"></script>
+</html>
